@@ -4,19 +4,23 @@
   ========================================
 */
 
-* {
-	box-sizing: border-box;
-}
-
 @media screen and (min-width: 1000px) {
 
+	/*
+	  ========================================
+	  Typography
+	  ========================================
+	*/
 
+	.banner h1 {
+		font-size: 20vw;
+	}
 
 	.container {
 		margin: 0 auto;
 		padding-left: 30px;
 		padding-right: 30px;
-		width: 1402px; /* 100%? */
+		width: 1400px; /* 100%? */
 	}
 
 	.video-placeholder {
@@ -48,6 +52,17 @@
 
 	section {
 		position: relative;
+		width: 100%;
+	}
+
+	section h1,
+	section .text {
+		margin: 0;
+	}
+
+	section img {
+		width: none;
+		max-width: none;
 	}
 
 	/*
@@ -59,6 +74,7 @@
 	.section-1 {
 		height: 921px;
 	}
+
 	.section-1 h1 {
 		position: absolute;
 		left: 170px;
@@ -74,7 +90,7 @@
 
 	.section-1 .portrait-l {
 		position: absolute;
-		z-index: 2;
+		z-index: -1;
 		right: 55px;
 		top: 284px;
 		width: 402px;
@@ -128,16 +144,19 @@
 		position: absolute;
 		top: 113px;
 		left: 153px;
+		z-index: 2;
 	}
 
 	.section-2 .font-image {
 		position: absolute;
 		left: 60px;
 		top: 258px;
+		margin-top: 0px;
+		z-index: 3;
 	}
 
 	.section-2 .text {
-		position: relative;
+		position: absolute;
 		left: 127px;
 		top: 807px;
 	}
@@ -152,6 +171,10 @@
 		margin-top: 138px;
 	}
 
+	.section-3 .caption {
+		margin: 0;
+	}
+
 	.section-3 .video-placeholder {
 		margin-top: 138px;
 		width: 100%;
@@ -161,6 +184,11 @@
 	.profile {
 		margin-top: 95px;
 		height: 880px;
+	}
+
+	.profile ul {
+		position: absolute;
+		z-index: 3;
 	}
 
 	.profile-l {
@@ -190,12 +218,14 @@
 
 	.season ul {
 		position: absolute;
-		right: 214px;
+		top: 80px;
+		right: 240px;
+		z-index: 3;
 	}
 
 	.season-l {
 		position: absolute;
-		top: 142px;
+		top: 160px;
 		right: 365px;
 		width: 585px;
 		height: 703px;
@@ -212,13 +242,15 @@
 	}
 
 	.awards {
+		margin-top: 100px;
 		height: 1548px;
 	}
 
 	.awards ul {
 		position: absolute;
-		top: -67px;
+		top: 75px;
 		left: 257px;
+		z-index: 3;
 	}
 
 	.awards-l {
@@ -260,5 +292,144 @@
 		height: 882px;
 	}
 
+	/*
+	  ========================================
+	  Section 5
+	  ========================================
+	*/
+	
+	.banner {
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+	}
 
+	.banner img {
+		visibility: visible;
+		width: 100%;
+		/*display: none;*/
+	}
+
+	.banner h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	#banner-xi {
+		background: none;
+		margin-bottom: -25px;
+	}
+
+	#banner-hero {
+		background: none;
+	}
+
+	#banner-hero-back {
+		background: none;
+	}
+
+	.grid-shoes {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 75px 0px;
+	}
+
+	.grid-shoes > * {
+		width: 600px;
+		height: 680px;
+		flex-basis: 600px;
+		margin: 35px;
+	}
+
+	/*
+	  ========================================
+	  Gallery
+	  ========================================
+	*/	
+
+	.gallery {
+		height: 1357px;
+		margin-top: 116px;
+	}
+
+	.gallery img,
+	.gallery .text {
+		position: absolute;
+	}	
+
+	.gallery .text {
+		z-index: 4;
+	}
+	
+	.gallery-1 {
+		width: 857px;
+		height: 572px;
+		top: 0px;
+		left: 112px;
+		z-index: 1;
+	}
+
+	.gallery-2 {
+		width: 574px;
+		height: 419px;
+		top: 346px;
+		right: 48px;
+		z-index: 3;
+	}
+
+	.gallery-3 {
+		width: 874px;
+		height: 466px;
+		left: 34px;
+		bottom: 183px;
+		z-index: 2;
+	}
+
+	.gallery ul:nth-of-type(1) {
+		top: 598px;
+		left: 200px;
+	}
+
+	.gallery ul:nth-of-type(2) {
+		top: 996px;
+		right: 328px;
+	}
+
+	/*
+	  ========================================
+	  Footer
+	  ========================================
+	*/
+
+	footer {
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/images/footer.jpg");
+		background-position: 50% 40%;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		color: white;
+	}
+
+	footer > * {
+		padding-left: 60px;
+	}
+
+	#footer-title {
+		margin-top: 50px;
+		margin-bottom: 75px;
+	}
+
+	.credits-section {
+		margin-bottom: 50px;
+	}
+
+	.credits-section h1 {
+		margin-bottom: 20px;
+}
+	
 }
