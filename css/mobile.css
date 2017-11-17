@@ -1,0 +1,252 @@
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.33rem;
+}
+
+.text {
+	text-transform: uppercase;
+}
+
+.uncramped-text {
+	line-height: 1;
+}
+
+.cramped-text {
+	line-height: 0.75;
+}
+
+.section-2 .text {
+	line-height: 1;
+}
+
+.banner h1 {
+	font-size: 10rem;
+	text-align: center;
+	line-height: 1;
+}
+
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+.container {
+	/*margin: 0 auto;*/
+	max-width: 100vw;
+}
+
+.video-placeholder {
+	width: 100vw; /* min-width causes some horizontal scroll bar issue */
+	max-width: 100%;
+	height: 500px;
+	background-color: black;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+header img {
+	height: 10vw;
+	margin: 0 43px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+section h1,
+section .text
+{
+	/*margin: 150px 0px;*/
+	margin: 37.5% 0px;
+}
+
+section img {
+	display: block;
+	width: 100vw;
+	max-width: 100%;
+}
+
+/*
+  ========================================
+  Section 1
+  ========================================
+*/
+
+.section-1 > * {
+	flex: 1 1 auto;
+}
+
+.section-1 h1,
+.section-1 .text
+{
+	/*margin: 150px 0px;*/
+}
+
+/*
+========================================
+Section 2
+========================================
+*/
+
+.section-2 > * {
+	flex: 1 1 auto;
+}
+
+.section-2 h1 {
+
+}
+
+.section-2 .font-image {
+	width: 300px;
+	margin-top: 50px;
+}
+
+@media only screen and (max-width: 400px) {
+	.section-2 .text {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.section-2 .text > * {
+		margin-bottom: 25%;
+	}
+}
+
+.section-2 .text {
+	padding: 0px 5px;
+	/* flex item */
+	align-self: stretch;
+	display: flex;
+	justify-content: space-around;
+}
+
+/*
+  ========================================
+  Section 3
+  ========================================
+*/
+
+.section-3 .caption {
+	margin: 100px 0px;
+}
+
+/*
+  ========================================
+  Section 5
+  ========================================
+*/
+
+.banner {
+	position: relative;
+	width: 100vh;
+	max-width: 100%;
+	background-size: contain;
+}
+
+.banner img {
+	visibility: hidden;
+}
+
+.banner h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	transform: translate(-50%, -50%);
+}
+
+#banner-xi {
+	background-image: url("../assets/images/birthofmichaeljordan/xi.png");
+}
+
+#banner-hero {
+	background-image: url("../assets/images/winlike82/hero-shoe.jpg");
+	color: white;
+}
+
+#banner-hero-back {
+	background-image: url("../assets/images/winlike82/hero-back-shoe.jpg");
+	color: #99c0e6;
+}
+
+/*
+  ========================================
+  Gallery
+  ========================================
+*/
+
+@media only screen and (max-width: 400px) {
+
+	.gallery {
+		overflow: hidden;
+	}
+	
+	.gallery img {
+		width: 125%;
+		max-width: none;
+	}
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+footer {
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/images/footer.jpg");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+footer > * {
+	padding-left: 8.75%;
+	padding-right: 5%;
+}
+
+#footer-title {
+	margin-top: 50px;
+	margin-bottom: 75px;
+}
+
+.credits-section {
+	margin-bottom: 50px;
+}
+
+.credits-section h1 {
+	margin-bottom: 20px;
+}

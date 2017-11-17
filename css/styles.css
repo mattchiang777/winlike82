@@ -1,6 +1,6 @@
 /*
   ========================================
-  Layout
+  Layout for Desktop
   ========================================
 */
 
@@ -8,253 +8,257 @@
 	box-sizing: border-box;
 }
 
-.container {
-	margin: 0 auto;
-	padding-left: 30px;
-	padding-right: 30px;
-	width: 1402px; /* 100%? */
-}
-
-.center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.video-placeholder {
-	width: 697px;
-	height: 425px;
-	background: black;
-}
-
-.col-1,
-.col-2,
-.col-3 {
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 92px;
-}
-
-header {
-	margin-top: 30px;
-	margin-bottom: 147px;
-}
-
-header img {
-	height: 100px;
-	margin: 0 43px;
-}
-
-section {
-	position: relative;
-}
-
-/*
-  ========================================
-  Section 1
-  ========================================
-*/
-
-.section-1 {
-	height: 921px;
-}
-.section-1 h1 {
-	position: absolute;
-	left: 170px;
-	top: 90px;
-}
-
-.section-1 .video-placeholder {
-	position: absolute;
-	left: 70px;
-	top: 247px;
-}
+@media screen and (min-width: 1000px) {
 
 
-.section-1 .portrait-l {
-	position: absolute;
-	z-index: 2;
-	right: 55px;
-	top: 284px;
-	width: 402px;
-	height: 604px;
-}
 
-.section-1 .portrait-s {
-	position: absolute;
-	z-index: 3;
-	right: 223px;
-	top: 0px;
-	width: 289px;
-	height: 374px;
-}
+	.container {
+		margin: 0 auto;
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 1402px; /* 100%? */
+	}
 
-.section-1 .text {
-	position: absolute;
-	z-index: 1;
-	right: 344px;
-	top: 730px;
-}
+	.video-placeholder {
+		width: 697px;
+		height: 425px;
+		background: black;
+	}
 
-/*
-  ========================================
-  Section 2
-  ========================================
-*/
+	.col-1,
+	.col-2,
+	.col-3 {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 92px;
+	}
 
-.section-2 {
-	height: 911px;
-	margin-top: 161px;
-}
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+		margin-bottom: 147px;
+	}
 
-.section-2 h1 {
-	position: absolute;
-	right: 296px;
-	top: 0px;
-}
+	header img {
+		height: 100px;
+		margin: 0 43px;
+	}
 
-.section-2 .video-placeholder {
-	position: absolute;
-	right: 73px;
-	top: 142px;
-	width: 791px;
-	height: 531px;
-}
+	section {
+		position: relative;
+	}
 
-.section-2 .thumbnail {
-	width: 262px;
-	height: 192px;
-	position: absolute;
-	top: 113px;
-	left: 153px;
-}
+	/*
+	  ========================================
+	  Section 1
+	  ========================================
+	*/
 
-.section-2 .font-image {
-	position: absolute;
-	left: 60px;
-	top: 258px;
-}
+	.section-1 {
+		height: 921px;
+	}
+	.section-1 h1 {
+		position: absolute;
+		left: 170px;
+		top: 90px;
+	}
 
-.section-2 .text {
-	position: relative;
-	left: 127px;
-	top: 807px;
-}
+	.section-1 .video-placeholder {
+		position: absolute;
+		left: 70px;
+		top: 247px;
+	}
 
-/*
-  ========================================
-  Section 3
-  ========================================
-*/
 
-.section-3 {
-	margin-top: 138px;
-}
+	.section-1 .portrait-l {
+		position: absolute;
+		z-index: 2;
+		right: 55px;
+		top: 284px;
+		width: 402px;
+		height: 604px;
+	}
 
-.section-3 .video-placeholder {
-	margin-top: 138px;
-	width: 100%;
-	height: 1032px;
-}
+	.section-1 .portrait-s {
+		position: absolute;
+		z-index: 3;
+		right: 223px;
+		top: 0px;
+		width: 289px;
+		height: 374px;
+	}
 
-.profile {
-	margin-top: 95px;
-	height: 880px;
-}
+	.section-1 .text {
+		position: absolute;
+		z-index: 1;
+		right: 344px;
+		top: 730px;
+	}
 
-.profile-l {
-	position: absolute;
-	right: 246px;
-	width: 600px;
-	height: 666px;
-}
+	/*
+	  ========================================
+	  Section 2
+	  ========================================
+	*/
 
-.profile-s {
-	position: absolute;
-	left: 236px;
-	top: 447px;
-	width: 433px;
-	height: 433px;
-}
+	.section-2 {
+		height: 911px;
+		margin-top: 161px;
+	}
 
-.profile ul {
-	position: absolute;
-	top: 77px;
-	left: 113px;
-}
+	.section-2 h1 {
+		position: absolute;
+		right: 296px;
+		top: 0px;
+	}
 
-.season {
-	height: 1296px;
-}
+	.section-2 .video-placeholder {
+		position: absolute;
+		right: 73px;
+		top: 142px;
+		width: 791px;
+		height: 531px;
+	}
 
-.season ul {
-	position: absolute;
-	right: 214px;
-}
+	.section-2 .thumbnail {
+		width: 262px;
+		height: 192px;
+		position: absolute;
+		top: 113px;
+		left: 153px;
+	}
 
-.season-l {
-	position: absolute;
-	top: 142px;
-	right: 365px;
-	width: 585px;
-	height: 703px;
-	z-index: 2;
-}
+	.section-2 .font-image {
+		position: absolute;
+		left: 60px;
+		top: 258px;
+	}
 
-.season-s {
-	position: absolute;
-	top: 713px;
-	right: 107px;
-	width: 439px;
-	height: 583px;
-	z-index: 1;
-}
+	.section-2 .text {
+		position: relative;
+		left: 127px;
+		top: 807px;
+	}
 
-.awards {
-	height: 1548px;
-}
+	/*
+	  ========================================
+	  Section 3
+	  ========================================
+	*/
 
-.awards ul {
-	position: absolute;
-	top: -67px;
-	left: 257px;
-}
+	.section-3 {
+		margin-top: 138px;
+	}
 
-.awards-l {
-	position: absolute;
-	top: 260px;
-	right: 284px;
-	width: 672px;
-	height: 899px;
-}
+	.section-3 .video-placeholder {
+		margin-top: 138px;
+		width: 100%;
+		height: 1032px;
+	}
 
-.awards-s {
-	position: absolute;
-	top: 887px;
-	left: 139px;
-	width: 501px;
-	height: 661px;
-}
+	.profile {
+		margin-top: 95px;
+		height: 880px;
+	}
 
-/*
-  ========================================
-  Section 4
-  ========================================
-*/
+	.profile-l {
+		position: absolute;
+		right: 246px;
+		width: 600px;
+		height: 666px;
+	}
 
-.section-4 {
-	margin-top: 275px;
-	height: 1037px;
-}
+	.profile-s {
+		position: absolute;
+		left: 236px;
+		top: 447px;
+		width: 433px;
+		height: 433px;
+	}
 
-.section-4 h1 {
-	position: absolute;
-	right: 235px;
-}
+	.profile ul {
+		position: absolute;
+		top: 77px;
+		left: 113px;
+	}
 
-.section-4 .video-placeholder {
-	position: absolute;
-	top: 155px;
-	width: 100%;
-	height: 882px;
+	.season {
+		height: 1296px;
+	}
+
+	.season ul {
+		position: absolute;
+		right: 214px;
+	}
+
+	.season-l {
+		position: absolute;
+		top: 142px;
+		right: 365px;
+		width: 585px;
+		height: 703px;
+		z-index: 2;
+	}
+
+	.season-s {
+		position: absolute;
+		top: 713px;
+		right: 107px;
+		width: 439px;
+		height: 583px;
+		z-index: 1;
+	}
+
+	.awards {
+		height: 1548px;
+	}
+
+	.awards ul {
+		position: absolute;
+		top: -67px;
+		left: 257px;
+	}
+
+	.awards-l {
+		position: absolute;
+		top: 260px;
+		right: 284px;
+		width: 672px;
+		height: 899px;
+	}
+
+	.awards-s {
+		position: absolute;
+		top: 887px;
+		left: 139px;
+		width: 501px;
+		height: 661px;
+	}
+
+	/*
+	  ========================================
+	  Section 4
+	  ========================================
+	*/
+
+	.section-4 {
+		margin-top: 275px;
+		height: 1037px;
+	}
+
+	.section-4 h1 {
+		position: absolute;
+		right: 235px;
+	}
+
+	.section-4 .video-placeholder {
+		position: absolute;
+		top: 155px;
+		width: 100%;
+		height: 882px;
+	}
+
+
 }

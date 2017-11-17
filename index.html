@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Win Like '82</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
 	<div class="container">
 		
 	
 	<header>
-		<div class="center">
-			<img src="assets/images/jumpanlogo.png" alt="">
-			<span>X</span>
-			<img src="assets/images/UNC_logo.png" alt="">
-		</div>
+		<img src="assets/images/jumpanlogo.png" alt="">
+		<span>X</span>
+		<img src="assets/images/UNC_logo.png" alt="">
 	</header>
 
 	<section class="section-1">
 		<h1>Mike Before Michael</h1>
 		<div class="video-placeholder"></div>
-		<img class="portrait-l" src="assets/images/mikebeforemichael/portrait.jpg" alt="">
-		<img class="portrait-s" src="assets/images/mikebeforemichael/portrait.jpg" alt="">
-		<div class="text">
+		<div>
+			<img class="portrait-l" src="assets/images/mikebeforemichael/portrait.jpg" alt="">
+		</div>
+		<div>
+			<img class="portrait-s" src="assets/images/mikebeforemichael/portrait.jpg" alt="">
+		</div>
+		<div class="text cramped-text">
 			<p>Just a freshman on the block</p>
 			<p>Just a freshman on the block</p>
 			<p>Just a freshman on the block</p>
@@ -32,16 +37,20 @@
 			<p>Just a freshman on the block</p>
 			<p>Just a freshman on the block</p>
 			<p>Just a freshman on the block</p>
-			<p>Just a freshman on the block</p>
-			<p>Just a freshman on the block</p>
+			<p class="uncramped-text">Just a freshman on the block</p>
+			<p class="uncramped-text">Just a freshman on the block</p>
 		</div>
 	</section>
 
 	<section class="section-2">
 		<h1>Think like Mike</h1>
-		<img class="thumbnail" src="assets/images/thinklikemike/jordan-thumbnail.jpg" alt="">
+		<div>
+			<img class="thumbnail" src="assets/images/thinklikemike/jordan-thumbnail.jpg" alt="">
+		</div>
 		<div class="video-placeholder"></div>
-		<img class="font-image" src="assets/images/thinklikemike/carolina-font.png" alt="">
+		<div>
+			<img class="font-image" src="assets/images/thinklikemike/carolina-font.png" alt="">
+		</div>
 		<div class="text">
 			<div class="col-1">
 				<p>"I've always <br> been <br> taught</p>
@@ -49,15 +58,16 @@
 			<div class="col-2">
 				<p>That to <br> reach a <br> goal in life <br> that you want</p>
 			</div>
-			<div class="col-3">
+			<div class="col-3 cramped-text">
 				<p>You got to work hard to get it</p>
 				<p>You got to work hard to get it</p>
 				<p>You got to work hard to get it</p>
 				<p>You got to work hard to get it</p>
 				<p>You got to work hard to get it</p>
 				<p>You got to work hard to get it</p>
-				<p>You got to work hard to get it</p>
-				<p>You got to work hard to get it"</p>
+				<br>
+				<p class="uncramped-text">You got to work hard to get it</p>
+				<p class="uncramped-text">You got to work hard to get it"</p>
 			</div>
 		</div>
 	</section>
@@ -67,7 +77,7 @@
 		<div class="video-placeholder"></div>
 		
 		<section class="profile">
-			<ul>
+			<ul class="caption">
 				<h2>Michael Jeffrey Jordan</h2>
 				<br>
 				<li>Nickname: "Mike"</li>
@@ -82,8 +92,9 @@
 		</section>
 
 		<section class="season">
-			<ul>
+			<ul class="caption">
 				<h2>1981-1982 season</h2>
+				<br>
 				<li>12 pts v. Kansas</li>
 				<li>19 pts v. Kentucky</li>
 				<li>12 pts v. Maryland</li>
@@ -98,8 +109,9 @@
 		</section>
 
 		<section class="awards">
-			<ul>
+			<ul class="caption">
 				<h2>College awards and honors</h2>
+				<br>
 				<li>NCAA Champion 1981-82</li>
 				<li>ACC Freshman of the Year 1981-82</li>
 				<li>NCAA All-American First Team 1982-83</li>
@@ -121,14 +133,12 @@
 		<div class="video-placeholder"></div>
 	</section>
 
-<!-- 
-	<section>
-		<div>
-			<h1>Win Like '82</h1>
+	<section class="section-5">
+		<div class="banner" id="banner-xi">
 			<img src="assets/images/birthofmichaeljordan/xi.png" alt="">
 		</div>
 
-		<div>
+		<div class="banner" id="banner-hero">
 			<h1 class="oversized">Win Like '82</h1>
 			<img src="assets/images/winlike82/hero-shoe.jpg" alt="">
 		</div>
@@ -140,46 +150,46 @@
 			<img src="assets/images/shoes/5.jpeg" alt="">
 		</div>
 
-		<div>
+		<div class="banner" id="banner-hero-back">
 			<h1 class="oversized">Win Like '82</h1>
 			<img src="assets/images/winlike82/hero-back-shoe.jpg" alt="">
 		</div>
 		
-		<div>
+		<section class="gallery">
 			<img src="assets/images/winlike82/group-shot-sneakerbardetroit.jpg" alt="">
+				<ul class="text cramped-text">
+					<li class="uncramped-text">Win like Mike</li>
+					<br>
+					<li>Win like Mike</li>
+					<li>Win like Mike</li>
+					<li>Win like Mike</li>
+					<li>Win like Mike</li>
+					<li>Win like Mike</li>
+					<li>Win like Mike</li>
+					<br>
+					<li class="uncramped-text">Win like Mike</li>
+					<li class="uncramped-text">Win like Mike</li>
+				</ul>
 			<img src="assets/images/winlike82/feet-sneakerbardetroit.jpg" alt="">
+				<ul class="text cramped-text">
+					<li>Paying homage</li>
+					<li>Paying homage</li>
+					<br>
+					<li>Paying homage</li>
+					<li>Paying homage</li>
+					<li>Paying homage</li>
+					<li>Paying homage</li>
+					<br>
+					<li>Paying homage</li>
+				</ul>
 			<img src="assets/images/winlike82/flip-angle-nicekicks.jpg" alt="">
-			<div>
-				<ul>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-					<li>Win like Mike</li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-					<li>Paying homage</li>
-				</ul>
-			</div>
 		</div>
 	</section>
 
 	<footer>
-		<h1>Bibliography</h1>
+		<h1 id="footer-title">Bibliography</h1>
 
-		<div>
+		<div class="credits-section">
 			<h1>Video</h1>
 			<ul>
 				<li>ITSYOUUTTUUUBEE</li>
@@ -188,7 +198,7 @@
 			</ul>
 		</div>
 
-		<div>
+		<div class="credits-section">
 			<h1>Images</h1>
 			<ul>
 				<li>Jordan.com</li>
@@ -197,16 +207,14 @@
 			</ul>
 		</div>
 
-		<div>
-			<h1>GIFS // Video Editing</h1>
+		<div class="credits-section">
+			<h1>Content and coding</h1>
 			<ul>
 				<li>@phattyphresh</li>
 			</ul>
 		</div>
-
-		<h2>A web exhibit by <a href="">@phattyphresh</a></h2>
 	</footer>
- -->
+ 
 	</div>
 </body>
 </html>
