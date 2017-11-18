@@ -22,7 +22,7 @@ h1 {
 	font-size: 1.33rem;
 }
 
-.text {
+.text-block {
 	text-transform: uppercase;
 }
 
@@ -34,7 +34,7 @@ h1 {
 	line-height: 0.75;
 }
 
-.section-2 .text {
+.section-2 .text-block {
 	line-height: 1;
 }
 
@@ -51,7 +51,6 @@ h1 {
 */
 
 .container {
-	/*margin: 0 auto;*/
 	max-width: 100vw;
 }
 
@@ -86,9 +85,7 @@ section {
 }
 
 section h1,
-section .text
-{
-	/*margin: 150px 0px;*/
+section .text-block {
 	margin: 37.5% 0px;
 }
 
@@ -108,11 +105,6 @@ section img {
 	flex: 1 1 auto;
 }
 
-.section-1 h1,
-.section-1 .text {
-	/*margin: 150px 0px;*/
-}
-
 /*
 ========================================
 Section 2
@@ -123,28 +115,24 @@ Section 2
 	flex: 1 1 auto;
 }
 
-.section-2 h1 {
-
-}
-
-.section-2 .font-image {
+.section-2 .image-block {
 	width: 300px;
 	margin-top: 50px;
 }
 
 @media only screen and (max-width: 400px) {
-	.section-2 .text {
+	.section-2 .text-block {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 	}
 
-	.section-2 .text > * {
+	.section-2 .text-block > * {
 		margin-bottom: 25%;
 	}
 }
 
-.section-2 .text {
+.section-2 .text-block {
 	padding: 0px 5px;
 	/* flex item */
 	align-self: stretch;
@@ -242,10 +230,10 @@ footer > * {
 	margin-bottom: 75px;
 }
 
-.credits-section {
+.credits {
 	margin-bottom: 50px;
 }
 
-.credits-section h1 {
+.credits h1 {
 	margin-bottom: 20px;
 }

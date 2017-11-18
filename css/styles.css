@@ -38,9 +38,6 @@
 	}
 
 	header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin-top: 30px;
 		margin-bottom: 147px;
 	}
@@ -56,7 +53,7 @@
 	}
 
 	section h1,
-	section .text {
+	section .text-block {
 		margin: 0;
 	}
 
@@ -106,7 +103,7 @@
 		height: 374px;
 	}
 
-	.section-1 .text {
+	.section-1 .text-block {
 		position: absolute;
 		z-index: 1;
 		right: 344px;
@@ -147,7 +144,7 @@
 		z-index: 2;
 	}
 
-	.section-2 .font-image {
+	.section-2 .image-block {
 		position: absolute;
 		left: 60px;
 		top: 258px;
@@ -155,7 +152,7 @@
 		z-index: 3;
 	}
 
-	.section-2 .text {
+	.section-2 .text-block {
 		position: absolute;
 		left: 127px;
 		top: 807px;
@@ -310,14 +307,6 @@
 		/*display: none;*/
 	}
 
-	.banner h1 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin: 0;
-		transform: translate(-50%, -50%);
-	}
-
 	#banner-xi {
 		background: none;
 		margin-bottom: -25px;
@@ -358,11 +347,11 @@
 	}
 
 	.gallery img,
-	.gallery .text {
+	.gallery .text-block {
 		position: absolute;
 	}	
 
-	.gallery .text {
+	.gallery .text-block {
 		z-index: 4;
 	}
 	
@@ -407,29 +396,11 @@
 	*/
 
 	footer {
-		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/images/footer.jpg");
 		background-position: 50% 40%;
-		background-size: cover;
-		display: flex;
-		flex-direction: column;
-		color: white;
 	}
 
 	footer > * {
 		padding-left: 60px;
 	}
-
-	#footer-title {
-		margin-top: 50px;
-		margin-bottom: 75px;
-	}
-
-	.credits-section {
-		margin-bottom: 50px;
-	}
-
-	.credits-section h1 {
-		margin-bottom: 20px;
-}
 	
 }
