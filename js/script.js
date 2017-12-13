@@ -57,6 +57,17 @@ var isScrolling = false
 
 window.addEventListener("scroll", throttleScroll, false)
 
+function setSize() {
+	return window.innerWidth
+}
+
+function isWithinWindowSize(width, limit) {
+	if (width < limit) {
+		return false
+	}
+	return true
+}
+
 function throttleScroll(e) {
 	if (isScrolling == false) {
 		requestAnimationFrame(function() {
@@ -102,57 +113,61 @@ function isFullyVisible(el) {
 // Parallax effect
 
 document.addEventListener("DOMContentLoaded", scrollLoop, false)
+document.addEventListener("resize", setSize, false)
 
 
 var xScrollPosition;
 var yScrollPosition;
 
 function scrollLoop(e) {
-	xScrollPosition = window.scrollX
-	yScrollPosition = window.scrollY
+	if (isWithinWindowSize(setSize(), 1000)) {
 
-	// Move all the elements
+		xScrollPosition = window.scrollX
+		yScrollPosition = window.scrollY
 
-	setTranslate(0, yScrollPosition * -.2, header)
-	// Section 1
-	setTranslate(0, yScrollPosition * -.5, portraitSmall)
-	setTranslate(0, yScrollPosition * .1, portraitLarge)
-	setTranslate(0, yScrollPosition * -.05, s1Text)
+		// Move all the elements
 
-	// Section 2
-	setTranslate(0, yScrollPosition * -.15, s2Thumbnail)
-	setTranslate(0, yScrollPosition * .02, s2ImageBlock)
-	if (isPartiallyVisible(s2Text)) { setTranslate(0, yScrollPosition * -.01, s2Text) }
+		setTranslate(0, yScrollPosition * -.2, header)
+		// Section 1
+		setTranslate(0, yScrollPosition * -.5, portraitSmall)
+		setTranslate(0, yScrollPosition * .1, portraitLarge)
+		setTranslate(0, yScrollPosition * -.05, s1Text)
 
-	// Section 3
-	if (isPartiallyVisible(sectionProfile)) {
-		setTranslate(0, yScrollPosition * -.01, s3ProfileCaption)
-		setTranslate(0, yScrollPosition * .025, profileLarge)
-		setTranslate(0, yScrollPosition * -0.075, profileSmall)
+		// Section 2
+		setTranslate(0, yScrollPosition * -.15, s2Thumbnail)
+		setTranslate(0, yScrollPosition * .02, s2ImageBlock)
+		if (isPartiallyVisible(s2Text)) { setTranslate(0, yScrollPosition * -.01, s2Text) }
+
+		// Section 3
+		if (isPartiallyVisible(sectionProfile)) {
+			setTranslate(0, yScrollPosition * -.01, s3ProfileCaption)
+			setTranslate(0, yScrollPosition * .025, profileLarge)
+			setTranslate(0, yScrollPosition * -0.075, profileSmall)
+		}
+		if (isPartiallyVisible(sectionSeason)) {
+			setTranslate(0, yScrollPosition * -.01, s3SeasonCaption)
+			setTranslate(0, yScrollPosition * 0.03, seasonLarge)
+			setTranslate(0, yScrollPosition * -0.02, seasonSmall)
+		}
+		if (isPartiallyVisible(sectionAwards)) {
+			setTranslate(0, yScrollPosition * -.01, s3AwardsCaption)
+			setTranslate(0, yScrollPosition * 0.01, awardsLarge)
+			setTranslate(0, yScrollPosition * -0.02, awardsSmall)	
+		}
+		
+		// Gallery
+		if (isPartiallyVisible(gallery)) {
+			setTranslate(0, yScrollPosition * .008, gallery1)
+			setTranslate(0, yScrollPosition * -.02, gallery2)
+			setTranslate(0, yScrollPosition * -.005, gallery3)
+			setTranslate(0, yScrollPosition * .001, galleryText1)
+			setTranslate(0, yScrollPosition * .003, galleryText2)
+		}
+
+		
+
 	}
-	if (isPartiallyVisible(sectionSeason)) {
-		setTranslate(0, yScrollPosition * -.01, s3SeasonCaption)
-		setTranslate(0, yScrollPosition * 0.03, seasonLarge)
-		setTranslate(0, yScrollPosition * -0.02, seasonSmall)
-	}
-	if (isPartiallyVisible(sectionAwards)) {
-		setTranslate(0, yScrollPosition * -.01, s3AwardsCaption)
-		setTranslate(0, yScrollPosition * 0.01, awardsLarge)
-		setTranslate(0, yScrollPosition * -0.02, awardsSmall)	
-	}
-	
-	// Gallery
-	if (isPartiallyVisible(gallery)) {
-		setTranslate(0, yScrollPosition * .008, gallery1)
-		setTranslate(0, yScrollPosition * -.02, gallery2)
-		setTranslate(0, yScrollPosition * -.005, gallery3)
-		setTranslate(0, yScrollPosition * .001, galleryText1)
-		setTranslate(0, yScrollPosition * .003, galleryText2)
-	}
-
-	
-
-	requestAnimationFrame(scrollLoop)
+		requestAnimationFrame(scrollLoop)
 }
 
 function setTranslate(xPos, yPos, el) {
